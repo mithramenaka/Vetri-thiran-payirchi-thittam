@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="EduGenie AI Learning Assistant"
+    >
+
+    <title>EduGenie | AI Learning Assistant</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', path='style.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+<header class="header">
+
+    <div class="header-inner">
+
+        <div class="brand">
+
+            <div class="brand-logo">
+                E
+            </div>
+
+            <div>
+
+                <h1>EduGenie</h1>
+
+                <p>
+                    AI Powered Learning Assistant
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="powered">
+            Powered by Gemini
+        </div>
+
+    </div>
+
+</header>
+
+
+<main class="container">
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-badge">
+            SMART LEARNING
+        </div>
+
+        <h2>
+            Learn smarter.
+            <span>Understand better.</span>
+        </h2>
+
+        <p>
+            Ask questions, understand difficult concepts,
+            generate quizzes, summarize study material,
+            and create personalized learning paths.
+        </p>
+
+    </section>
+
+
+    <!-- MAIN CARD -->
+
+    <section class="assistant-card">
+
+        <div class="section-heading">
+
+            <div>
+
+                <h2>
+                    Learning Assistant
+                </h2>
+
+                <p>
+                    Choose what you want EduGenie to do.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- TASK -->
+
+        <div class="form-group">
+
+            <label for="task">
+                Select a task
+            </label>
+
+            <select id="task">
+
+                <option value="qa">
+                    Ask a Question
+                </option>
+
+                <option value="explain">
+                    Explain a Topic
+                </option>
+
+                <option value="quiz">
+                    Generate a Quiz
+                </option>
+
+                <option value="summarize">
+                    Summarize Text
+                </option>
+
+                <option value="learn">
+                    Create Learning Path
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- LEVEL -->
+
+        <div
+            id="level-container"
+            class="form-group hidden"
+        >
+
+            <label for="level">
+                Learning Level
+            </label>
+
+            <select id="level">
+
+                <option value="Beginner">
+                    Beginner
+                </option>
+
+                <option value="Intermediate">
+                    Intermediate
+                </option>
+
+                <option value="Advanced">
+                    Advanced
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- INPUT -->
+
+        <div class="form-group">
+
+            <label for="user-input">
+                Your input
+            </label>
+
+            <textarea
+                id="user-input"
+                placeholder="Enter your question or study material..."
+                maxlength="20000"
+            ></textarea>
+
+
+            <div class="counter">
+
+                <span id="character-count">
+                    0
+                </span>
+
+                / 20,000
+
+            </div>
+
+        </div>
+
+
+        <!-- SUBMIT -->
+
+        <button
+            id="submit-button"
+            class="primary-button"
+        >
+
+            <span id="button-text">
+                Get Answer
+            </span>
+
+            <span
+                id="loading-spinner"
+                class="spinner hidden"
+            ></span>
+
+        </button>
+
+
+        <!-- ERROR -->
+
+        <div
+            id="error-message"
+            class="error-message hidden"
+        ></div>
+
+    </section>
+
+
+    <!-- RESULT -->
+
+    <section
+        id="result-card"
+        class="result-card hidden"
+    >
+
+        <div class="result-top">
+
+            <div>
+
+                <h2>
+                    EduGenie Result
+                </h2>
+
+                <p>
+                    AI-generated learning response
+                </p>
+
+            </div>
+
+
+            <button
+                id="copy-button"
+                class="copy-button"
+            >
+                Copy
+            </button>
+
+        </div>
+
+
+        <div id="result-content"></div>
+
+    </section>
+
+
+    <!-- FEATURES -->
+
+    <section class="features">
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                ?
+            </div>
+
+            <h3>
+                Ask Questions
+            </h3>
+
+            <p>
+                Get clear answers to your academic questions.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                💡
+            </div>
+
+            <h3>
+                Explain Concepts
+            </h3>
+
+            <p>
+                Simplify difficult topics into easy explanations.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                ✓
+            </div>
+
+            <h3>
+                Generate Quizzes
+            </h3>
+
+            <p>
+                Practice using AI-generated multiple-choice questions.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                📚
+            </div>
+
+            <h3>
+                Learning Paths
+            </h3>
+
+            <p>
+                Build structured plans from beginner to advanced.
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    EduGenie © 2026 | AI Powered Learning Assistant
+
+</footer>
+
+
+<script
+    src="{{ url_for('static', path='script.js') }}"
+></script>
+
+</body>
+
+</html>
